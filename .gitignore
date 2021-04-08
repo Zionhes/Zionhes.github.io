@@ -1,5 +1,11 @@
 *.jpg
+!hero.jpg
+
 *.mp4
 *.webm
+
 *.png
+!favicon.png
+!logo-white.png
+
 node_modules/
