@@ -2,3 +2,4 @@
 *.mp4
 *.webm
 *.png
+node_modules/
