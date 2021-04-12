@@ -1,4 +1,5 @@
 .btn {
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -10,6 +11,11 @@
     
         position: relative;
         font-size: $default-font-size;
+
+
+        // Change for the <button> element
+        border:none;
+        cursor: pointer;
     }
 
     &--white {
@@ -32,7 +38,7 @@
     
     &:hover {
         transform: translateY(-.3rem);
-        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        box-shadow: 0 1rem 2rem rgba($color-black, .3);
 
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
@@ -40,9 +46,13 @@
         }
     }
     
-    &:active {
+    &:active,
+    &:focus {
+        //<button> element
+        outline: none;
+
         transform: translateY(-.1rem);
-        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .3);
     }
     
     &::after {
@@ -79,12 +89,12 @@
     &:hover {
         background-color: $color-primary;
         color: $color-white;
-        transform: translateY(-2px);
-        box-shadow: 0 .8rem 1.5rem rgba(black, .3);
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(black, .2);
     }
 
     &:active {
         transform: translateY(0);
-        box-shadow: 0 .5rem 1rem rgba(black, .15);
+        box-shadow: 0 .5rem 1rem rgba(black, .3);
     }
 }
