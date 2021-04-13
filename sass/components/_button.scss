@@ -46,13 +46,15 @@
         }
     }
     
-    &:active,
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .3);
+    }
+
+    //focus separated from &:active for bug-fix on btn
     &:focus {
         //<button> element
         outline: none;
-
-        transform: translateY(-.1rem);
-        box-shadow: 0 .5rem 1rem rgba($color-black, .3);
     }
     
     &::after {
@@ -83,7 +85,7 @@
         text-decoration: none;
         border-bottom: 1px solid $color-primary;
         padding: 3px;
-        transition: all .2s;
+        transition: all .3s;
     }
 
     &:hover {
