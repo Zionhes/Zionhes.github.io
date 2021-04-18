@@ -8,6 +8,7 @@
     background-color: rgba(black, .8);
     backdrop-filter: blur(10px); // Generate low fps
     z-index: 10000;
+
     //display: none; Display: none; no permite la animación
     opacity: 0;
     visibility: hidden;
@@ -26,7 +27,7 @@
 
         overflow: hidden;
 
-        transform: translate(-50%, -50%) scale(.25);
+        transform: translate(-50%, -50%) scale(.25); // Reescribe el mixin. Para la animación
 
         transition: all .5s .2s;
     }
@@ -55,8 +56,8 @@
         margin-bottom: 4rem;
 
         column-count: 2; 
-        column-gap: 4rem;
-        column-rule: 1px solid $color-gray-light-2;
+        column-gap: 4rem; // space between
+        column-rule: 1px solid $color-gray-light-2; // border between
 
         -mop-hyphens: auto;
         -ms-hyphens: auto;

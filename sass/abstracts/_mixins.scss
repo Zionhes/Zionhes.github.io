@@ -12,3 +12,41 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+
+
+// MEDIA QUERY MANAGER
+/*
+    0   - 576px     sm
+    576 - 768px     md
+    768 - 992px     lg
+
+    992 > 1200px    xl
+   1200 >  *        xxl 
+
+*/
+
+// 1em = 16px 
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == sm {
+        @media (max-width: 37.5em) { @content }; // 576px=36em or 600px=37.5em
+    }
+
+    @if $breakpoint == md {
+        @media (max-width: 48em) { @content }; // 768px
+    }
+
+    @if $breakpoint == lg {
+        @media (max-width: 62em) { @content }; // 992px
+    }
+
+    @if $breakpoint == xl {
+        @media (max-width: 75em) { @content }; // 1200px
+    }
+
+    @if $breakpoint == xxl {
+        @media (max-width: 87.5em) { @content }; // 1400px
+    }
+}
