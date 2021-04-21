@@ -25,13 +25,16 @@
     992 > 1200px    xl
    1200 >  *        xxl 
 
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+    1em = 16px 
 */
 
-// 1em = 16px 
 @mixin respond($breakpoint) {
 
     @if $breakpoint == sm {
-        @media (max-width: 37.5em) { @content }; // 576px=36em or 600px=37.5em
+        @media (max-width: 36em) { @content }; // 576px=36em or 600px=37.5em
     }
 
     @if $breakpoint == md {

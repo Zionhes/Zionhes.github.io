@@ -24,7 +24,7 @@ html {
     }
 
     @include respond(sm) {
-        font-size: 43.75%; // 7px
+        font-size: 50%; // 7px 
     }
 }
 
@@ -36,11 +36,11 @@ body {
         padding: 0;
     }
 
-    @include respond(md) {
-        padding: 0;
+    @include respond(lg) {
+        padding: 3rem;
     }
 
-    @include respond(sm) {
-        padding: 0;
+    @include respond(md) {
+        padding: 0rem;
     }
 }

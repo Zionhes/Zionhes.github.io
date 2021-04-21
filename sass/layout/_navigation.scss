@@ -12,13 +12,17 @@
         top: 6rem;
         right: 6rem;
         z-index: 2000;
-        
+        ///
         background-color: $color-white;
         cursor: pointer;
         box-shadow: 0 1rem 3rem rgba($color-black, .2);
-
         //ICON
         text-align: center;
+
+        @include respond(md) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__background {
@@ -30,8 +34,12 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
-
         transition: transform .8s ease-out; //cubic-bezier(0, 0.55, 0.45, 1);
+
+        @include respond(md) {
+            top: 3.3rem;
+            right: 3.3rem;
+        }
     }
 
     &__nav {
@@ -53,10 +61,18 @@
 
         list-style: none;
         text-align: center;
+
+        @include respond(sm) {
+            width: 300px;
+        }
     }
 
     &__item {
         margin: 1rem;
+
+        @include respond(sm) {
+            margin: 1rem 0;
+        }
     } 
 
     &__link {
@@ -73,6 +89,11 @@
             background-image: linear-gradient(120deg,transparent 50%, $color-white 50%);
             background-size: 230%;
             transition: all .5s;
+
+            @include respond(sm) {
+                font-size: 2.5rem;
+                padding: 1rem 0;
+            }
 
             span {
                 margin-right: 1.5rem;

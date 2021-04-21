@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
 
-    background-color: rgba(black, .8);
+    background-color: rgba(black, .3);
     backdrop-filter: blur(10px); // Generate low fps
     z-index: 10000;
 
@@ -14,27 +14,37 @@
     visibility: hidden;
     transition: all .3s;
 
+    @include respond(sm) {
+        height: 110vh;
+    }
+
 
     &__content {
         width: 75%;
         @include position-abosolute-center;
-        
         border-radius: 3px;
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
-        
         display: table;
-
         overflow: hidden;
-
         transform: translate(-50%, -50%) scale(.25); // Reescribe el mixin. Para la animación
-
         transition: all .5s .2s;
-    }
+
+        @include respond(md) {
+            width: 85%;
+        }
+        @include respond(sm) {
+            width: 90%;
+        }
+    } 
 
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        @include respond(lg) {
+            display: none;
+        }
     }
 
     &__right {
@@ -43,6 +53,13 @@
         vertical-align: middle;
 
         padding: 3rem 5rem;
+        
+        @include respond(lg) {
+            padding: 2rem 5rem;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__img {
@@ -61,8 +78,13 @@
 
         -mop-hyphens: auto;
         -ms-hyphens: auto;
-        -webkit-hyphens: auto;
+        -web-kit-hyphens: auto;
         hyphens: auto; // COrtar una palabra y reanudarla en la siguiente línea
+
+        @include respond(lg) {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
     }
 
 
@@ -91,6 +113,11 @@
             transition: all .3s;
 
             line-height: 1;
+
+            @include respond(lg) {
+                top: 1.5rem;
+                right: 2rem;
+            }
 
             &:hover {
                 color: $color-primary;
