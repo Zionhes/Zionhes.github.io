@@ -1,9 +1,23 @@
 .row {
     max-width: $grid-width;
     margin: 0 auto;
+
+    @include respond(lg) {
+        max-width: 60rem;   
+    }
+    @include respond(md) {
+        max-width: 50rem;
+    }
+    @include respond(sm) {
+        max-width: 42rem;
+    }
     
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include respond(sm) {
+            margin-bottom: 4rem;
+        }
     }
 
     @include clearfix;
@@ -16,6 +30,15 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(lg) {
+                margin-right: 0;
+                margin-bottom: 6rem;
+            }
+        }
+
+        @include respond(lg) {
+            width: 100% !important;
         }
     }
 

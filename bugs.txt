@@ -1,0 +1,2 @@
+NAV: Es posible clickear las opciones de este en el borde derecho, creo que es debido a que se comprimió su width solamente
+y no se agregó un "DISPLAY: HIDDEN", con Javascript puede ser más sencillo improvisar para la solución de este bug.
