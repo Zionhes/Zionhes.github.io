@@ -42,12 +42,16 @@ body {
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
+    color: $color-primary;
     display: inline-block;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
     transition: all .2s;
+
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 
     @include respond(md) {
         font-size: 3rem;

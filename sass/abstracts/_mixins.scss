@@ -34,22 +34,22 @@ ORDER: Base + typography > general layout + grid > page layout > components
 @mixin respond($breakpoint) {
 
     @if $breakpoint == sm {
-        @media (max-width: 36em) { @content }; // 576px=36em or 600px=37.5em
+        @media only screen and (max-width: 36em) { @content }; // 576px=36em or 600px=37.5em
     }
 
     @if $breakpoint == md {
-        @media (max-width: 48em) { @content }; // 768px
+        @media only screen and (max-width: 48em) { @content }; // 768px
     }
 
     @if $breakpoint == lg {
-        @media (max-width: 62em) { @content }; // 992px
+        @media only screen and (max-width: 62em) { @content }; // 992px
     }
 
     @if $breakpoint == xl {
-        @media (max-width: 75em) { @content }; // 1200px
+        @media only screen and (max-width: 75em) { @content }; // 1200px
     }
 
     @if $breakpoint == xxl {
-        @media (max-width: 87.5em) { @content }; // 1400px
+        @media only screen and (max-width: 87.5em) { @content }; // 1400px
     }
 }

@@ -4,15 +4,18 @@
     position: fixed;
     top: 0;
     left: 0;
-
-    background-color: rgba(black, .3);
-    backdrop-filter: blur(10px); // Generate low fps
+    background-color: rgba(black, .8);
     z-index: 10000;
-
-    //display: none; Display: none; no permite la animación
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
+    //display: none; Display: none; no permite la animación
+
+    @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px); // Generate low fps
+        background-color: rgba(black, .3);
+    }
 
     @include respond(sm) {
         height: 110vh;
