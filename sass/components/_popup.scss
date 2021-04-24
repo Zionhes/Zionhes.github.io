@@ -4,21 +4,27 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(black, .8);
-    z-index: 10000;
+    transition: all .3s;
     opacity: 0;
     visibility: hidden;
-    transition: all .3s;
     //display: none; Display: none; no permite la animación
-
-    @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px); // Generate low fps
-        background-color: rgba(black, .3);
-    }
 
     @include respond(sm) {
         height: 110vh;
+    }
+
+    &__background {
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(black, .8);
+        background-color: red;
+        z-index: 10000;
+
+        @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px); // Generate low fps
+            background-color: rgba(black, .3);
+        }
     }
 
 
@@ -32,6 +38,7 @@
         overflow: hidden;
         transform: translate(-50%, -50%) scale(.25); // Reescribe el mixin. Para la animación
         transition: all .5s .2s;
+        z-index: 15000;
 
         @include respond(md) {
             width: 85%;
