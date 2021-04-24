@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+
+html {
+    // This defines wath 1rem is
+    font-size: 62.5%;
+
+    @include respond(xxl) {
+        font-size: 62.5%;
+    }
+
+    @include respond(xl) {
+        font-size: 56.25%; // 9px
+    }
+ 
+    @include respond(lg) {
+        font-size: 50%;    // 8px
+    }
+
+    @include respond(sm) {
+        font-size: 50%; // 7px 
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(xl) {
+        padding: 0;
+    }
+
+    @include respond(lg) {
+        padding: 3rem;
+    }
+
+    @include respond(md) {
+        padding: 0rem;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
